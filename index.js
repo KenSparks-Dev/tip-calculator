@@ -1,5 +1,4 @@
 let bill = document.getElementById('price');
-console.log(bill)
 let tip = document.getElementById('tip');
 let split = document.getElementById('split');
 let tipFive = document.querySelector('#five');
@@ -19,8 +18,18 @@ tipFive.addEventListener('click', () => {
 		style: 'currency',
 		currency: 'USD'
 	});
-	total.innerHTML = formatter.format(splitTotal);
-	tip.innerHTML = formatter.format(tipSum);
+
+	if (isNaN(preTip)) {
+		total.innerHTML = '$0.00';
+	} else {
+		total.innerHTML = formatter.format(splitTotal);
+	}
+
+	if (isNaN(splitTotal)) {
+		tip.innerHTML = '$0.00';
+	} else {
+		tip.innerHTML = formatter.format(tipSum);
+	}
 });
 
 tipTen.addEventListener('click', () => {
@@ -32,8 +41,17 @@ tipTen.addEventListener('click', () => {
 		style: 'currency',
 		currency: 'USD'
 	});
-	total.innerHTML = formatter.format(splitTotal);
-	tip.innerHTML = formatter.format(tipSum);
+	if (isNaN(preTip)) {
+		total.innerHTML = '$0.00';
+	} else {
+		total.innerHTML = formatter.format(splitTotal);
+	}
+
+	if (isNaN(splitTotal)) {
+		tip.innerHTML = '$0.00';
+	} else {
+		tip.innerHTML = formatter.format(tipSum);
+	}
 });
 
 tipFifteen.addEventListener('click', () => {
@@ -45,8 +63,17 @@ tipFifteen.addEventListener('click', () => {
 		style: 'currency',
 		currency: 'USD'
 	});
-	total.innerHTML = formatter.format(splitTotal);
-	tip.innerHTML = formatter.format(tipSum);
+	if (isNaN(preTip)) {
+		total.innerHTML = '$0.00';
+	} else {
+		total.innerHTML = formatter.format(splitTotal);
+	}
+
+	if (isNaN(splitTotal)) {
+		tip.innerHTML = '$0.00';
+	} else {
+		tip.innerHTML = formatter.format(tipSum);
+	}
 });
 
 tipTwenty.addEventListener('click', () => {
@@ -58,8 +85,17 @@ tipTwenty.addEventListener('click', () => {
 		style: 'currency',
 		currency: 'USD'
 	});
-	total.innerHTML = formatter.format(splitTotal);
-	tip.innerHTML = formatter.format(tipSum);
+	if (isNaN(preTip)) {
+		total.innerHTML = '$0.00';
+	} else {
+		total.innerHTML = formatter.format(splitTotal);
+	}
+
+	if (isNaN(splitTotal)) {
+		tip.innerHTML = '$0.00';
+	} else {
+		tip.innerHTML = formatter.format(tipSum);
+	}
 });
 
 tipTwentyFive.addEventListener('click', () => {
@@ -71,8 +107,17 @@ tipTwentyFive.addEventListener('click', () => {
 		style: 'currency',
 		currency: 'USD'
 	});
-	total.innerHTML = formatter.format(splitTotal);
-	tip.innerHTML = formatter.format(tipSum);
+	if (isNaN(preTip)) {
+		total.innerHTML = '$0.00';
+	} else {
+		total.innerHTML = formatter.format(splitTotal);
+	}
+
+	if (isNaN(splitTotal)) {
+		tip.innerHTML = '$0.00';
+	} else {
+		tip.innerHTML = formatter.format(tipSum);
+	}
 });
 
 custom.addEventListener('change', () => {
@@ -84,6 +129,15 @@ custom.addEventListener('change', () => {
 		style: 'currency',
 		currency: 'USD'
 	});
-	total.innerHTML = formatter.format(splitTotal);
-	tip.innerHTML = formatter.format(tipSum);
+	if(isNaN(preTip)){
+		total.innerHTML = '$0.00'
+	} else {
+		total.innerHTML = formatter.format(splitTotal);
+	}
+
+	if(isNaN(splitTotal)){
+		tip.innerHTML = '$0.00'
+	} else {
+		tip.innerHTML = formatter.format(tipSum);
+	}
 });
