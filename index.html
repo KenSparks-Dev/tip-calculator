@@ -19,12 +19,18 @@
   <div class="container">
     <div class="tip-calculator">
       <div class="content">
-        <div class="tip-calulator-processing">
+        <div class="tip-calculator__processing">
           <form class="tip-calculator__bill">
             <label for="price" class="tip-calculator__label">Bill</label>
             <div class="tip-calculator__input-container">
-              <img src="./images/icon-dollar.svg" alt="">
+              <img src="./images/icon-dollar.svg">
               <input type="text" id="price" class="tip-calculator__input">
+            </div>
+
+            <label class="tip-calculator__label" for="price">Number of People</label>
+            <div class="tip-calculator__input-container">
+              <img src="./images/icon-person.svg">
+              <input type="text" id="split" class="tip-calculator__input" placeholder="0">
             </div>
           </form>
           <p class="title">Select Tip %</p>
@@ -43,18 +49,10 @@
               <p>%</p>
             </li>
           </ul>
-          <form class="tip-calculator__split-section">
-            <label class="tip-calculator__label" for="price">Number of People</label>
-            <div class="tip-calculator__input-container">
-              <img src="./images/icon-person.svg" alt="">
-              <input type="text" id="split" class="tip-calculator__input" placeholder="0">
-            </div>
-
-          </form>
 
         </div>
         <div class="tip-calculator__results">
-          <div class="content">
+          <div class="results-content">
             <div class="tip-calculator__results-section">
               <p class="tip-calculator__results-text">Tip Amount<br><span>/ person</span></p>
               <p id="tip" class="tip-calculator__results-num">$0.00</p>

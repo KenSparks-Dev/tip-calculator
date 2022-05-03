@@ -20,16 +20,16 @@ tipFive.addEventListener('click', () => {
 		currency: 'USD'
 	});
 
-	if (isNaN(preTip)) {
-		total.innerHTML = '$0.00';
-	} else {
-		total.innerHTML = formatter.format(splitTotal);
-	}
-
 	if (isNaN(splitTotal)) {
 		tip.innerHTML = '$0.00';
 	} else {
 		tip.innerHTML = formatter.format(tipSum);
+	}
+
+	if (isNaN(preTip)) {
+		total.innerHTML = '$0.00';
+	} else {
+		total.innerHTML = formatter.format(splitTotal);
 	}
 });
 
@@ -101,7 +101,7 @@ tipTwentyFive.addEventListener('click', () => {
 
 tipFifty.addEventListener('click', () => {
 	let preTip = parseInt(bill.value);
-	let tipSum = preTip * 0.50;
+	let tipSum = preTip * 0.5;
 	let newTotal = tipSum + preTip;
 	let splitTotal = newTotal / split.value;
 	let formatter = new Intl.NumberFormat('en-US', {
@@ -130,21 +130,21 @@ custom.addEventListener('change', () => {
 		style: 'currency',
 		currency: 'USD'
 	});
-	if(isNaN(preTip)){
-		total.innerHTML = '$0.00'
+	if (isNaN(preTip)) {
+		total.innerHTML = '$0.00';
 	} else {
 		total.innerHTML = formatter.format(splitTotal);
 	}
 
-	if(isNaN(splitTotal)){
-		tip.innerHTML = '$0.00'
+	if (isNaN(splitTotal)) {
+		tip.innerHTML = '$0.00';
 	} else {
 		tip.innerHTML = formatter.format(tipSum);
 	}
 });
 
 //Reset Page
-let body = document.querySelector('body')
-function reset(){
-	window.location.reload(true)
+let body = document.querySelector('body');
+function reset() {
+	window.location.reload(true);
 }
