@@ -1,0 +1,33 @@
+@import 'colors';
+
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: 'Space Mono', monospace;
+	font-size: 10px;
+	background: $light-grayish-cyan;
+	width: 100%;
+}
+
+button {
+	font-family: 'Space Mono', monospace;
+	cursor: pointer;
+}
+ul li {
+	list-style: none;
+}
+
+a {
+	color: $white;
+	text-decoration: none;
+}
+
+//remove input stylings
+input[type="text"]::-webkit-search-decoration,
+input[type="text"]::-webkit-search-cancel-button,
+input[type="text"]::-webkit-search-results-button,
+input[type="text"]::-webkit-search-results-decoration {
+	display: none;
+}

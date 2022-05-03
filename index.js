@@ -4,11 +4,12 @@ let split = document.getElementById('split');
 let tipFive = document.querySelector('#five');
 let tipTen = document.querySelector('#ten');
 let tipFifteen = document.querySelector('#fifteen');
-let tipTwenty = document.querySelector('#twenty');
 let tipTwentyFive = document.querySelector('#twenty-five');
+let tipFifty = document.querySelector('#fifty');
 let custom = document.querySelector('#custom');
 let total = document.querySelector('#total');
 
+//Tip Functions
 tipFive.addEventListener('click', () => {
 	let preTip = parseInt(bill.value);
 	let tipSum = preTip * 0.05;
@@ -76,9 +77,9 @@ tipFifteen.addEventListener('click', () => {
 	}
 });
 
-tipTwenty.addEventListener('click', () => {
+tipTwentyFive.addEventListener('click', () => {
 	let preTip = parseInt(bill.value);
-	let tipSum = preTip * 0.2;
+	let tipSum = preTip * 0.25;
 	let newTotal = tipSum + preTip;
 	let splitTotal = newTotal / split.value;
 	let formatter = new Intl.NumberFormat('en-US', {
@@ -98,9 +99,9 @@ tipTwenty.addEventListener('click', () => {
 	}
 });
 
-tipTwentyFive.addEventListener('click', () => {
+tipFifty.addEventListener('click', () => {
 	let preTip = parseInt(bill.value);
-	let tipSum = preTip * 0.25;
+	let tipSum = preTip * 0.50;
 	let newTotal = tipSum + preTip;
 	let splitTotal = newTotal / split.value;
 	let formatter = new Intl.NumberFormat('en-US', {
@@ -141,3 +142,9 @@ custom.addEventListener('change', () => {
 		tip.innerHTML = formatter.format(tipSum);
 	}
 });
+
+//Reset Page
+let body = document.querySelector('body')
+function reset(){
+	window.location.reload(true)
+}

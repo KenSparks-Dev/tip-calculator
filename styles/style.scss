@@ -1,0 +1,144 @@
+@import 'global';
+@import 'colors';
+
+.header {
+	text-transform: uppercase;
+	color: $dark-grayish-cyan;
+	letter-spacing: 1rem;
+	line-height: 2rem;
+	padding-top: 2.5rem;
+	padding-bottom: 1.5rem;
+	text-align: center;
+}
+.container {
+	width: 100%;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	width: 85%;
+	margin: 0 auto;
+}
+.tip-calculator {
+	background: $white;
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	padding-top: 2rem;
+	&__label {
+		color: $very-dark-cyan;
+		font-size: 0.8rem;
+	}
+	&__input-container {
+		background-color: $very-light-grayish-cyan;
+		padding-left: 1rem;
+		margin-top: .5rem;
+	}
+	&__input {
+		background-color: transparent;
+		border: none;
+		padding: .5rem 0;
+		margin-top: .4rem;
+		width: 90%;
+		color: $very-dark-cyan;
+		text-align: end;
+		font-weight: bold;
+		outline: none;
+	}
+	&__btns {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+	&__btns-btn {
+		width: 100%;
+		height: 3rem;
+		background: $very-dark-cyan;
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__btns-btn button,
+	&__btns-btn input {
+		border: none;
+		color: $white;
+		background: transparent;
+		width: 100%;
+		cursor: pointer;
+		text-align: center;
+		font-size: 1.5rem;
+	}
+	&__btns-btn p {
+		font-size: 1.5rem;
+		padding-right: 1.5rem;
+		color: $light-grayish-cyan;
+	}
+	&__btns-btn input {
+		color: $very-dark-cyan;
+		text-align: end;
+		padding-right: .4rem;
+	}
+	&__btns-btn:nth-child(6) {
+		font-size: 2.5rem;
+		background: $very-light-grayish-cyan;
+		color: $very-dark-cyan;
+	}
+
+	&__split-section {
+		margin-top: 1.5rem;
+	}
+
+	&__results {
+		margin: 1.6rem 0;
+		border-radius: 1rem;
+		padding: 1rem 0;
+	}
+
+	&__results-section {
+		display: flex;
+		justify-content: space-between;
+		padding-top: .8rem;
+		align-items: baseline;
+	}
+	&__results-text {
+		font-size: 1rem;
+		line-height: 1.1rem;
+	}
+	&__results-text span {
+		font-size: .7rem;
+		color: $grayish-cyan;
+		padding: 0;
+	}
+	&__results-num {
+		font-size: 1.6rem;
+		color: $strong-cyan;
+	}
+	&__results-btn {
+		font-size: 1.6rem;
+		background: $strong-cyan;
+		color: $very-dark-cyan;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		margin-top: 1rem;
+	}
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+}
+
+.tip-calculator__results {
+	background: $very-dark-cyan;
+	color: $white;
+}
+
+.title {
+	margin-top: 1rem;
+}

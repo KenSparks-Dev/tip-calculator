@@ -1,0 +1,12 @@
+{
+  "name": "tip-calculator",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
+    "parcel": "latest"
+  }
+}
