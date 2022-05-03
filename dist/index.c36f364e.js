@@ -94,9 +94,10 @@ custom.addEventListener('change', ()=>{
     else tip.innerHTML = formatter.format(tipSum);
 });
 //Reset Page
-let body = document.querySelector('body');
-function reset() {
-    window.location.reload(true);
-}
+let resetForm = document.querySelector('form');
+let resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', ()=>{
+    resetForm.reset();
+});
 
 //# sourceMappingURL=index.c36f364e.js.map

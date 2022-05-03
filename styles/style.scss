@@ -20,13 +20,13 @@
 	width: 85%;
 	margin: 0 auto;
 }
-.tip-calculator {
+.tip-calculator{
 	background: $white;
 	border-radius: 1rem;
 	display: flex;
 	flex-direction: column;
 	padding-top: 2rem;
-	&__label {
+	&__label, .section-title  {
 		color: $very-dark-cyan;
 		font-size: 0.8rem;
 	}

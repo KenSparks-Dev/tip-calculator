@@ -144,7 +144,8 @@ custom.addEventListener('change', () => {
 });
 
 //Reset Page
-let body = document.querySelector('body');
-function reset() {
-	window.location.reload(true);
-}
+let resetForm = document.querySelector('form');
+let resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', () => {
+	resetForm.reset();
+});
