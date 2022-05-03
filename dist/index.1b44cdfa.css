@@ -183,29 +183,33 @@ input[type="text"]::-webkit-search-decoration, input[type="text"]::-webkit-searc
   .content {
     width: 95%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 2rem 0;
   }
 
   .tip-calculator {
+    max-width: 50rem;
     width: 85%;
     margin: auto;
+    padding-top: 0;
   }
 
   .tip-calculator__processing {
-    width: 55%;
+    width: 40%;
   }
 
   .tip-calculator__results {
-    width: 40%;
+    width: 50%;
     margin: 0;
     position: relative;
   }
 
   .tip-calculator__results-btn {
     width: 85%;
+    padding: .5rem;
+    font-size: 1rem;
     position: absolute;
-    bottom: 1rem;
+    bottom: 2rem;
   }
 }
 
