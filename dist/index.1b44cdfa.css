@@ -104,6 +104,13 @@ input[type="text"]::-webkit-search-decoration, input[type="text"]::-webkit-searc
   display: flex;
 }
 
+.tip-calculator .btn-selected {
+  height: 100%;
+  width: 100%;
+  background: #26c0ab;
+  border-radius: .2rem;
+}
+
 .tip-calculator__btns-btn button, .tip-calculator__btns-btn input {
   color: #fff;
   width: 100%;
@@ -169,10 +176,6 @@ input[type="text"]::-webkit-search-decoration, input[type="text"]::-webkit-searc
   border-radius: 5px;
   margin-top: 1rem;
   font-size: 1.6rem;
-}
-
-.title {
-  margin-top: 1rem;
 }
 
 @media (min-width: 768px) {

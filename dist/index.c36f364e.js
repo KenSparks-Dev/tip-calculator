@@ -24,6 +24,7 @@ function tips() {
             else tip.innerHTML = formatter.format(tipSum);
             if (isNaN(preTip)) total.innerHTML = '$0.00';
             else total.innerHTML = formatter.format(splitTotal);
+        // btn.classList.toggle('btn-selected')
         });
     });
 }

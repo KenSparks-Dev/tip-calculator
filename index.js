@@ -10,6 +10,7 @@ let custom = document.querySelector('#custom');
 let total = document.querySelector('#total');
 let tipBtns = document.querySelectorAll('.tip-btn');
 
+
 function tips(){
 	tipBtns.forEach(btn => {
 		btn.addEventListener('click', () => {
@@ -33,6 +34,7 @@ function tips(){
 			} else {
 				total.innerHTML = formatter.format(splitTotal);
 			}
+			// btn.classList.toggle('btn-selected')
 		})
 	})
 }
@@ -70,3 +72,4 @@ resetButton.addEventListener('click', () => {
 	resetTip.innerHTML = '$0.00';
 	resetTotal.innerHTML = '$0.00';
 });
+
