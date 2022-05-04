@@ -8,36 +8,26 @@ let tipTwentyFive = document.querySelector('#tip-twenty-five');
 let tipFifty = document.querySelector('#tip-fifty');
 let custom = document.querySelector('#custom');
 let total = document.querySelector('#total');
-let tipValues = [
-    tipFive,
-    tipTen,
-    tipFifteen,
-    tipTwentyFive,
-    tipFifty
-];
-console.log(tipValues);
-//Tip Functions
+let tipBtns = document.querySelectorAll('.tip-btn');
 function tips() {
-    let preTip = parseInt(bill.value);
-    let values = tipValues.map((item)=>parseInt(item.value)
-    );
-    console.log(values);
+    tipBtns.forEach((btn)=>{
+        btn.addEventListener('click', ()=>{
+            let preTip = parseInt(bill.value);
+            let tipSum = preTip * btn.value;
+            let newTotal = tipSum + preTip;
+            let splitTotal = newTotal / split.value;
+            let formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD'
+            });
+            if (isNaN(splitTotal)) tip.innerHTML = '$0.00';
+            else tip.innerHTML = formatter.format(tipSum);
+            if (isNaN(preTip)) total.innerHTML = '$0.00';
+            else total.innerHTML = formatter.format(splitTotal);
+        });
+    });
 }
 tips();
-tipFive.addEventListener('click', ()=>{
-    let preTip = parseInt(bill.value);
-    let tipSum = preTip * 0.05;
-    let newTotal = tipSum + preTip;
-    let splitTotal = newTotal / split.value;
-    let formatter = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD'
-    });
-    if (isNaN(splitTotal)) tip.innerHTML = '$0.00';
-    else tip.innerHTML = formatter.format(tipSum);
-    if (isNaN(preTip)) total.innerHTML = '$0.00';
-    else total.innerHTML = formatter.format(splitTotal);
-});
 custom.addEventListener('change', ()=>{
     let preTip = parseInt(bill.value);
     let tipSum = preTip * parseInt(custom.value) * 0.01;
@@ -56,7 +46,6 @@ custom.addEventListener('change', ()=>{
 let resetForm = document.querySelector('form');
 let resetTotal = document.querySelector('#total');
 let resetTip = document.querySelector('#tip');
-console.log(resetTotal);
 let resetButton = document.getElementById('reset');
 resetButton.addEventListener('click', ()=>{
     resetForm.reset();
