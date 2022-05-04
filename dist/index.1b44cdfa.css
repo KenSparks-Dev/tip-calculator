@@ -81,6 +81,12 @@ input[type="text"]::-webkit-search-decoration, input[type="text"]::-webkit-searc
   font-weight: bold;
 }
 
+.tip-calculator__input-custom::placeholder {
+  text-align: center;
+  padding: 0;
+  font-size: 1.4rem;
+}
+
 .tip-calculator__btns {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -105,12 +111,6 @@ input[type="text"]::-webkit-search-decoration, input[type="text"]::-webkit-searc
   text-align: center;
   background: none;
   border: none;
-  font-size: 1.5rem;
-}
-
-.tip-calculator__btns-btn p {
-  color: #c5e4e7;
-  padding-right: 1.5rem;
   font-size: 1.5rem;
 }
 
@@ -177,29 +177,41 @@ input[type="text"]::-webkit-search-decoration, input[type="text"]::-webkit-searc
 
 @media (min-width: 768px) {
   .header {
-    margin-top: 4rem;
+    margin-top: 3.5rem;
+    margin-bottom: 3rem;
   }
 
   .content {
-    width: 95%;
+    width: 93%;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 2rem 0;
   }
 
   .tip-calculator {
-    max-width: 50rem;
+    max-width: 45rem;
     width: 85%;
     margin: auto;
     padding-top: 0;
   }
 
   .tip-calculator__processing {
-    width: 40%;
+    width: 50%;
+  }
+
+  .tip-calculator__btns {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+    display: grid;
+  }
+
+  .tip-calculator__btns-btn {
+    height: 2.6rem;
   }
 
   .tip-calculator__results {
-    width: 50%;
+    width: 45%;
     margin: 0;
     position: relative;
   }

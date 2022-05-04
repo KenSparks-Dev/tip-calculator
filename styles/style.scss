@@ -20,13 +20,14 @@
 	width: 85%;
 	margin: 0 auto;
 }
-.tip-calculator{
+.tip-calculator {
 	background: $white;
 	border-radius: 1rem;
 	display: flex;
 	flex-direction: column;
 	padding-top: 2rem;
-	&__label, .section-title  {
+	&__label,
+	.section-title {
 		color: $very-dark-cyan;
 		font-size: 0.8rem;
 	}
@@ -45,6 +46,11 @@
 		text-align: end;
 		font-weight: bold;
 		outline: none;
+	}
+	&__input-custom::placeholder {
+		font-size: 1.4rem;
+		text-align: center;
+		padding: 0;
 	}
 	&__btns {
 		display: grid;
@@ -70,11 +76,6 @@
 		cursor: pointer;
 		text-align: center;
 		font-size: 1.5rem;
-	}
-	&__btns-btn p {
-		font-size: 1.5rem;
-		padding-right: 1.5rem;
-		color: $light-grayish-cyan;
 	}
 	&__btns-btn input {
 		color: $very-dark-cyan;
@@ -135,24 +136,34 @@
 
 @media (min-width: 768px) {
 	.header {
-		margin-top: 4rem;
+		margin-top: 3.5rem;
+		margin-bottom: 3rem;
 	}
 	.content {
 		flex-direction: row;
-		justify-content: space-around;
-		width: 95%;
+		justify-content: space-between;
+		width: 93%;
 		padding: 2rem 0;
 	}
 	.tip-calculator {
-		max-width: 50rem;
+		max-width: 45rem;
 		margin: auto auto;
 		width: 85%;
 		padding-top: 0;
 		&__processing {
-			width: 40%;
+			width: 50%;
+		}
+		&__btns {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1rem;
+			margin-top: 1rem;
+		}
+		&__btns-btn {
+			height: 2.6rem;
 		}
 		&__results {
-			width: 50%;
+			width: 45%;
 			position: relative;
 			margin: 0;
 		}
