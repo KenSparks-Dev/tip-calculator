@@ -182,7 +182,7 @@ input[type="text"]::-webkit-search-decoration, input[type="text"]::-webkit-searc
   }
 
   .content {
-    width: 92%;
+    width: 93%;
     flex-direction: row;
     justify-content: space-between;
     padding: 2rem 0;
@@ -196,7 +196,7 @@ input[type="text"]::-webkit-search-decoration, input[type="text"]::-webkit-searc
   }
 
   .tip-calculator__processing {
-    width: 51%;
+    width: 50%;
   }
 
   .tip-calculator__btns {
@@ -204,6 +204,10 @@ input[type="text"]::-webkit-search-decoration, input[type="text"]::-webkit-searc
     gap: 1rem;
     margin-top: 1rem;
     display: grid;
+  }
+
+  .tip-calculator__btns-btn {
+    height: 2.6rem;
   }
 
   .tip-calculator__results {

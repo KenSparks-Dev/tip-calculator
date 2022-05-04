@@ -142,7 +142,7 @@
 	.content {
 		flex-direction: row;
 		justify-content: space-between;
-		width: 92%;
+		width: 93%;
 		padding: 2rem 0;
 	}
 	.tip-calculator {
@@ -151,13 +151,16 @@
 		width: 85%;
 		padding-top: 0;
 		&__processing {
-			width: 51%;
+			width: 50%;
 		}
 		&__btns {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 1rem;
 			margin-top: 1rem;
+		}
+		&__btns-btn {
+			height: 2.6rem;
 		}
 		&__results {
 			width: 45%;
