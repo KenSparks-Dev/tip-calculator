@@ -22,15 +22,17 @@
         <div class="tip-calculator__processing">
           <form class="tip-calculator__bill">
             <label for="price" class="tip-calculator__label">Bill</label>
-            <div class="tip-calculator__input-container">
+            <div id="error"></div>
+            <div class="tip-calculator__input-container" id="price-container">
               <img src="./images/icon-dollar.svg">
-              <input type="number" id="price" class="tip-calculator__input">
+              <input type="number" id="bill" class="tip-calculator__input">
             </div>
 
-            <label class="tip-calculator__label" for="price">Number of People</label>
-            <div class="tip-calculator__input-container">
+            <label class="tip-calculator__label tip-calculator__label-split" for="split">Number of People <span
+                class="tip-calculator__label--error" id="error-message">Can't Be Zero</span></label>
+            <div class="tip-calculator__input-container" id="split-container">
               <img src="./images/icon-person.svg">
-              <input type="number" id="split" class="tip-calculator__input" placeholder="0">
+              <input type="number" id="split" class="tip-calculator__input" placeholder="0" value='0' ;>
             </div>
           </form>
           <p class="section-title">Select Tip %</p>

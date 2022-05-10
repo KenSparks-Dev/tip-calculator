@@ -35,6 +35,7 @@
 		background-color: $very-light-grayish-cyan;
 		padding-left: 1rem;
 		margin: .7rem 0;
+		border: transparent 2px solid;
 	}
 	&__input {
 		background-color: transparent;
@@ -51,6 +52,14 @@
 		font-size: 1.4rem;
 		text-align: center;
 		padding: 0;
+	}
+	&__label-split {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__label--error {
+		color: red;
+		display: none;
 	}
 	&__btns {
 		display: grid;

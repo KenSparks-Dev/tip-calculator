@@ -65,6 +65,7 @@ input[type="text"]::-webkit-search-decoration, input[type="text"]::-webkit-searc
 
 .tip-calculator__input-container {
   background-color: #f4fafa;
+  border: 2px solid #0000;
   margin: .7rem 0;
   padding-left: 1rem;
 }
@@ -85,6 +86,16 @@ input[type="text"]::-webkit-search-decoration, input[type="text"]::-webkit-searc
   text-align: center;
   padding: 0;
   font-size: 1.4rem;
+}
+
+.tip-calculator__label-split {
+  justify-content: space-between;
+  display: flex;
+}
+
+.tip-calculator__label--error {
+  color: red;
+  display: none;
 }
 
 .tip-calculator__btns {
